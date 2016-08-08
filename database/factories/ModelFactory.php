@@ -19,3 +19,27 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+$factory->define(App\Order::class, function (Faker\Generator $faker) {
+    return [
+    	'ddh' => str_random(10),
+        'name' => $faker->name,
+    ];
+});
+
+$factory->define(App\Pool::class, function (Faker\Generator $faker) {
+    return [
+    	'api' => str_random(10),
+        'name' => $faker->name,
+        'status' => rand(0, 1),
+    ];
+});
+
+$factory->define(App\Log::class, function (Faker\Generator $faker) {
+    return [
+    	'log' => $faker->text,
+    ];
+});
+
+
